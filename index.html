@@ -1,65 +1,51 @@
+<style> 
 
-<style>
-	
-	body {
-		background: #999;
-		font-family: sans-serif;
-	}
-	.arrow:after {
-		content: "";
-		width: 16px;
-		height: 32px;
-		display: block;
-		-webkit-mask-image: url(arrow-mask.svg);
-		mask: url(arrow-mask.svg);
-		position: absolute;
-		right: -14px;
-		top: 0;
-		background: -webkit-linear-gradient(#ffffff 0%, #410606 100%);
-		box-shadow: 1px 0 1px #666;
-		z-index: 9;
-/* 		border: 1px solid #333; */
-	}
-	.arrow {
+	a { 
 		display: inline-block;
 		height: 32px;
 		position: relative;
-		background: -webkit-linear-gradient(#ffffff 0%, #410606 100%);
+		background: red;
+		margin-left: -8px;
 		padding: 0 .5em 0 1.5em;
-		line-height: 2em;
-		color: #fff;
-		font-weight: bold;
-/* 		text-shadow: 0 -1px 1px #666; */
-		margin-left: -6px;
+		line-height: 32px;
+		background: -webkit-linear-gradient(rgb(255,255,0) 0%, rgb(255,0,0) 100%);
+		border: 2px solid #000;
+/* 		border-left: none; */
+		text-decoration: none;
 	}
-	.arrow.white, .arrow.white:after {
-		background: #fff;
+	a:hover {
+		text-decoration: underline;
 	}
-	.arrow.white {
-		color: #666;
-/* 		text-shadow: 0 1px 1px #333; */
-	}
-	.arrow:first-of-type {
+	a:first-of-type {
 		padding-left: .5em;
 		margin-left: 0;
-		border-radius: 3px 0 0 3px;
 	}
-	.arrow:last-of-type {
-		border-radius: 0 3px 3px 0;
+	
+	a:after {
+		position: absolute;
+		content: "";
+		height: 32px;
+		width: 18px;
+		background: url(svg-pattern.svg);
+		top: 0;
+		right: -16px;
+		z-index: 9;
 	}
-	.arrow:last-of-type:after {
+	
+	a:last-of-type:after {
 		display: none;
+	}
+	
+	body {
+		background: #999;
 	}
 
 </style>
+
 <body>
-	<span class="arrow">
-		Text
-	</span>
-	<span class="arrow white">
-		Text
-	</span>
-	<span class="arrow white">
-		Text
-	</span>
+
+<a href="#">First</a>
+<a href="#">2nd</a>
+<a href="#" style="background: #fff;">The Third One</a>
+
 </body>
