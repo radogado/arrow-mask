@@ -12,6 +12,7 @@
 		border: 2px solid #000;
 /* 		border-left: none; */
 		text-decoration: none;
+		color: #000;
 	}
 	a:hover {
 		text-decoration: underline;
@@ -19,6 +20,7 @@
 	a:first-of-type {
 		padding-left: .5em;
 		margin-left: 0;
+		border-radius: 5px 0 0 5px;
 	}
 	
 	a:after {
@@ -32,12 +34,17 @@
 		z-index: 9;
 	}
 	
+	a:last-of-type {
+		border-radius: 0 5px 5px 0;
+	}
+
 	a:last-of-type:after {
 		display: none;
 	}
 	
 	body {
 		background: #999;
+		font-family: sans-serif;
 	}
 
 </style>
