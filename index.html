@@ -1,60 +1,64 @@
 <style> 
 	
-	span {
+	.breadcrumbs span {
 		display: table-cell;
+		width: 1%;
 	}
 
-	a { 
+	.breadcrumbs a { 
 		display: block;
 		white-space: nowrap;
-		height: 32px;
 		position: relative;
-		background: red;
+		background: #fff;
 		padding: 0 .5em 0 1.5em;
 		line-height: 32px;
-
-background: #ffff00; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffff00 0%, #ff0000 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffff00 0%,#ff0000 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#ff0000',GradientType=0 ); /* IE6-9 */
-
+		height: 32px;
 		border: 2px solid #000;
 		border-right: none;
-/* 		border-left: none; */
 		text-decoration: none;
 		color: #000;
 	}
-	a:hover {
+	.breadcrumbs a.active {
+		background: #ffff00; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ffff00 0%, #ff0000 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #ffff00 0%,#ff0000 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#ff0000',GradientType=0 ); /* IE6-9 */
+
+
+	}
+	.breadcrumbs a:hover {
 		text-decoration: underline;
 	}
-	span:first-of-type a {
+	.breadcrumbs span:first-of-type a {
 		padding-left: 1em;
 		margin-left: 0;
 		border-radius: 5px 0 0 5px;
 	}
 	
-	a:after {
+	.breadcrumbs a:after {
 		position: absolute;
 		content: "";
 		height: 32px;
 		width: 18px;
-		background-image: url(svg-pattern.svg);
-		background-size: auto 
+		background-image: url(arrow.svg);
 		top: 0;
 		right: -18px;
 		z-index: 9;
 	}
-	
-	span:last-of-type a {
+	.breadcrumbs a.active:after {
+		background-image: url(arrow-active.svg);
+	}
+		
+	.breadcrumbs span:last-of-type a {
 		border-radius: 0 5px 5px 0;
 		border-right: 2px solid #000;
 	}
 
-	span:last-of-type a:after {
+	.breadcrumbs span:last-of-type a:after {
 		display: none;
 	}
 	
@@ -63,29 +67,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', end
 		font-family: sans-serif;
 	}
 	
-	div {
+	.breadcrumbs {
 		width: 500px;
-		background: #666;
 		display: table;
-		table-layout: auto;
-	}
-	
-	td {
-		border: 1px solid #000;
-		padding: 1% 2%;
 	}
 
 </style>
 
 <body>
 
-<div>
-
-	<span> <a href="#">First</a> </span>
-	<span> <a href="#">2nd</a> </span>
-	<span> <a href="#" style="background: #fff;">The Third One Is Too Long</a> </span>
-
-</div>
+	<div class="breadcrumbs">
+	
+		<span> <a href="#">First</a> </span>
+		<span> <a href="#" class="active">2nd</a> </span>
+		<span> <a href="#">The Third One Is Too Long</a> </span>
+	
+	</div>
 
 </body>
 
