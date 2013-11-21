@@ -1,15 +1,37 @@
 <style> 
 	
+	body {
+		background: #999;
+		font-family: sans-serif;
+	}
+	
+	.breadcrumbs {
+		display: table;
+		margin: 2em 0;
+	}
+
 	.breadcrumbs span {
+
 		display: table-cell;
 		width: 1%;
+
 	}
 
 	.breadcrumbs a { 
+
 		display: block;
 		white-space: nowrap;
 		position: relative;
-		background: #fff;
+
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #aaaaaa 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#aaaaaa)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#aaaaaa 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#aaaaaa',GradientType=0 ); /* IE6-9 */
+
 		padding: 0 .5em 0 1.5em;
 		line-height: 32px;
 		height: 32px;
@@ -17,8 +39,10 @@
 		border-right: none;
 		text-decoration: none;
 		color: #000;
+
 	}
 	.breadcrumbs a.active {
+
 		background: #ffff00; /* Old browsers */
 		background: -moz-linear-gradient(top,  #ffff00 0%, #ff0000 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
@@ -28,33 +52,30 @@
 		background: linear-gradient(to bottom,  #ffff00 0%,#ff0000 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#ff0000',GradientType=0 ); /* IE6-9 */
 
-
 	}
 	.breadcrumbs a:hover {
 		text-decoration: underline;
 	}
 	.breadcrumbs span:first-of-type a {
-		padding-left: 1em;
-		margin-left: 0;
-		border-radius: 5px 0 0 5px;
+		padding-left: .8em;
+		border-radius: 4px 0 0 4px;
 	}
 	
 	.breadcrumbs a:after {
-		position: absolute;
 		content: "";
+		position: absolute;
 		height: 32px;
 		width: 18px;
 		background-image: url(arrow.svg);
-		top: 0;
 		right: -18px;
-		z-index: 9;
+		z-index: 1;
 	}
 	.breadcrumbs a.active:after {
 		background-image: url(arrow-active.svg);
 	}
 		
 	.breadcrumbs span:last-of-type a {
-		border-radius: 0 5px 5px 0;
+		border-radius: 0 4px 4px 0;
 		border-right: 2px solid #000;
 	}
 
@@ -62,19 +83,19 @@
 		display: none;
 	}
 	
-	body {
-		background: #999;
-		font-family: sans-serif;
-	}
-	
-	.breadcrumbs {
-		width: 500px;
-		display: table;
-	}
-
 </style>
 
 <body>
+
+<div style="width: 500px; margin: 0 auto;"> <!-- Sample container -->
+
+	<div class="breadcrumbs">
+	
+		<span> <a href="#" class="active">First</a> </span>
+		<span> <a href="#">2nd</a> </span>
+		<span> <a href="#">The Third One Is Too Long</a> </span>
+	
+	</div>
 
 	<div class="breadcrumbs">
 	
@@ -83,6 +104,16 @@
 		<span> <a href="#">The Third One Is Too Long</a> </span>
 	
 	</div>
+
+	<div class="breadcrumbs">
+	
+		<span> <a href="#">First</a> </span>
+		<span> <a href="#">2nd</a> </span>
+		<span> <a href="#" class="active">The Third One Is Too Long</a> </span>
+	
+	</div>
+
+</div>
 
 </body>
 
