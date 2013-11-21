@@ -1,118 +1,32 @@
-<style> 
-	
-	body {
-		background: #999;
-		font-family: sans-serif;
-	}
-	
-	.breadcrumbs {
-		display: table;
-		margin: 2em 0;
-	}
-
-	.breadcrumbs span {
-
-		display: table-cell;
-		width: 1%;
-
-	}
-
-	.breadcrumbs a { 
-
-		display: block;
-		white-space: nowrap;
-		position: relative;
-
-		background: #ffffff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #ffffff 0%, #aaaaaa 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#aaaaaa)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #ffffff 0%,#aaaaaa 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #ffffff 0%,#aaaaaa 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#aaaaaa',GradientType=0 ); /* IE6-9 */
-
-		padding: 0 .5em 0 1.5em;
-		line-height: 32px;
-		height: 32px;
-		border: 2px solid #000;
-		border-right: none;
-		text-decoration: none;
-		color: #000;
-		text-shadow: 0 1px 1px #ddd;
-
-	}
-	.breadcrumbs a.active {
-
-		background: #ffff00; /* Old browsers */
-		background: -moz-linear-gradient(top,  #ffff00 0%, #ff0000 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #ffff00 0%,#ff0000 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #ffff00 0%,#ff0000 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#ff0000',GradientType=0 ); /* IE6-9 */
-
-	}
-	.breadcrumbs a:hover {
-		text-decoration: underline;
-	}
-	.breadcrumbs span:first-of-type a {
-		padding-left: .8em;
-		border-radius: 4px 0 0 4px;
-	}
-	
-	.breadcrumbs a:after {
-		content: "";
-		position: absolute;
-		height: 32px;
-		width: 18px;
-		background-image: url(arrow.svg);
-		right: -18px;
-		z-index: 1;
-	}
-	.breadcrumbs a.active:after {
-		background-image: url(arrow-active.svg);
-	}
-		
-	.breadcrumbs span:last-of-type a {
-		border-radius: 0 4px 4px 0;
-		border-right: 2px solid #000;
-	}
-
-	.breadcrumbs span:last-of-type a:after {
-		display: none;
-	}
-	
-</style>
+<link rel="styleSheet" href="breadcrumbs.css" type="text/css" media="screen">
 
 <body>
 
 <div style="width: 500px; margin: 0 auto;"> <!-- Sample container -->
 
-	<div class="breadcrumbs">
+	<ol class="breadcrumbs">
 	
-		<span> <a href="#" class="active">First</a> </span>
-		<span> <a href="#">2nd</a> </span>
-		<span> <a href="#">The Third One Is Too Long</a> </span>
+		<li> <a href="#" class="active">First</a> </li>
+		<li> <a href="#">2nd</a> </li>
+		<li> <a href="#">The Third One Is Too Long</a> </li>
 	
-	</div>
+	</ol>
 
-	<div class="breadcrumbs">
+	<ol class="breadcrumbs">
 	
-		<span> <a href="#">First</a> </span>
-		<span> <a href="#" class="active">Now The Second One Is Longer</a> </span>
-		<span> <a href="#">3rd</a> </span>
+		<li> <a href="#">First</a> </li>
+		<li> <a href="#" class="active">Now The Second One Is Longer</a> </li>
+		<li> <a href="#">3rd</a> </li>
 	
-	</div>
+	</ol>
 
-	<div class="breadcrumbs">
+	<ol class="breadcrumbs">
 	
-		<span> <a href="#">The First One Is Here</a> </span>
-		<span> <a href="#">2nd</a> </span>
-		<span> <a href="#" class="active">Third</a> </span>
+		<li> <a href="#">The First One Is Here</a> </li>
+		<li> <a href="#">2nd</a> </li>
+		<li> <a href="#" class="active">Third</a> </li>
 	
-	</div>
+	</ol>
 
 </div>
 
